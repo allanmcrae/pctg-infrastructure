@@ -1,0 +1,7 @@
+---
+
+- name: shiny server setup
+  hosts: pctg-shiny
+  
+  roles:
+    - fail2ban
