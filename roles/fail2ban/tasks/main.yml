@@ -5,6 +5,16 @@
   notify:
     - restart fail2ban
 
+- name: install local config
+  template:
+    src: jail.local.j2
+    dest: /etc/fail2ban/jail.local
+    owner: "root"
+    group: "root"
+    mode: 0644
+  notify:
+    - restart fail2ban
+
 - name: start and enable service
   systemd:
     name: "fail2ban.service"
