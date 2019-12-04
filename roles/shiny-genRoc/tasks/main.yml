@@ -1,0 +1,36 @@
+- name: install needed R libraries
+  cran: name={{ item }} state=present
+  with_items:
+    - ggplot2
+    - markdown
+    - knitr
+    - xtable
+
+- name: create genRoc directory structure
+  file:
+    path: "/srv/shiny-server/{{ item }}"
+    state: directory
+    mode: 0755
+    owner: shiny
+    group: shiny
+  with_items:
+    - "genRoc"
+    - "genRoc/www"
+    - "genRoc/www/img"
+    - "genRoc/www/js"
+
+- name: install genRoc files
+  copy:
+    src: "{{ role_path }}/files/{{ item }}"
+    dest: "/srv/shiny-server/genRoc/{{ item }}"
+    owner: shiny
+    group: shiny
+    mode: 0644
+  with_items:
+    - "custom_html.R"
+    - "functions.R"
+    - "parameters_info.txt"
+    - "server.R"
+    - "ui.R"
+    - "www/img/GitHub-Mark-120px-plus.png"
+    - "www/js/ga.js"
