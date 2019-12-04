@@ -1,0 +1,33 @@
+- name: install needed R libraries
+  cran: name=markdown state=present
+  
+- name: create mRnd directory structure
+  file:
+    path: "/srv/shiny-server/{{ item }}"
+    state: directory
+    mode: 0755
+    owner: shiny
+    group: shiny
+  with_items:
+    - "mRnd"
+    - "mRnd/www"
+    - "mRnd/www/img"
+    - "mRnd/www/js"
+
+- name: install mRnd files
+  copy:
+    src: "{{ role_path }}/files/{{ item }}"
+    dest: "/srv/shiny-server/mRnd/{{ item }}"
+    owner: shiny
+    group: shiny
+    mode: 0644
+  with_items:
+    - "app_inputs.R"
+    - "app_outputs.R"
+    - "binary_derivation.md"
+    - "custom_html.R"
+    - "functions.R"
+    - "server.R"
+    - "ui.R"
+    - "www/img/GitHub-Mark-120px-plus.png"
+    - "www/js/ga.js"

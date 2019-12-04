@@ -16,3 +16,6 @@
 [submodule "roles/shiny-genRoc/files"]
 	path = roles/shiny-genRoc/files
 	url = https://github.com/CNSGenomics/genRoc.git
+[submodule "roles/shiny-mRnd/files"]
+	path = roles/shiny-mRnd/files
+	url = https://github.com/CNSGenomics/mRnd.git
