@@ -17,3 +17,11 @@
     enabled: yes
     state: started
     daemon-reload: yes
+
+- name: remove example files
+  file:
+    path: "/srv/shiny-server/{{ item }}"
+    state: absent
+  with_items:
+    - "index.html"
+    - "sample-apps"
