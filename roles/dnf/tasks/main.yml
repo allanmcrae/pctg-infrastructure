@@ -1,0 +1,11 @@
+- name: check if powertools repo is enabled
+  shell: dnf -q repolist --enabled PowerTools && echo disabled || echo enabled
+  args:
+    warn: no
+  register: powertools
+
+- name: enable powertools repo for epel 8
+  command: dnf config-manager --set-enabled PowerTools
+  args:
+    warn: no
+  when: powertools.stdout == "disabled"
