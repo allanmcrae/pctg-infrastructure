@@ -1,3 +1,6 @@
 [submodule "roles/shiny-gwasMP/files"]
 	path = roles/shiny-gwasMP/files
 	url = https://github.com/jianyangqt/gwasMP.git
+[submodule "roles/shiny-Falconer/files"]
+	path = roles/shiny-Falconer/files
+	url = https://github.com/CNSGenomics/falconer-shiny
