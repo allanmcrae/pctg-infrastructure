@@ -10,3 +10,6 @@
 [submodule "roles/shiny-gctaPower/files"]
 	path = roles/shiny-gctaPower/files
 	url = https://github.com/jianyangqt/gctaPower.git
+[submodule "roles/shiny-M2Tdb/files"]
+	path = roles/shiny-M2Tdb/files
+	url = https://github.com/jianyangqt/M2Tdb.git
