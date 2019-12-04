@@ -1,0 +1,21 @@
+- name: install needed R libraries
+  cran: name=fpow state=present
+
+- name: create TwinPower directory structure
+  file:
+    path: "/srv/shiny-server/TwinPower"
+    state: directory
+    mode: 0755
+    owner: shiny
+    group: shiny
+
+- name: install TwinPower files
+  copy:
+    src: "{{ role_path }}/files/{{ item }}"
+    dest: "/srv/shiny-server/TwinPower/{{ item }}"
+    owner: shiny
+    group: shiny
+    mode: 0644
+  with_items:
+    - "server.R"
+    - "ui.R"

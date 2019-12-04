@@ -19,3 +19,6 @@
 [submodule "roles/shiny-mRnd/files"]
 	path = roles/shiny-mRnd/files
 	url = https://github.com/CNSGenomics/mRnd.git
+[submodule "roles/shiny-TwinPower/files"]
+	path = roles/shiny-TwinPower/files
+	url = https://github.com/CNSGenomics/TwinPower.git
