@@ -1,0 +1,3 @@
+[submodule "roles/shiny-gwasMP/files"]
+	path = roles/shiny-gwasMP/files
+	url = https://github.com/jianyangqt/gwasMP.git

@@ -1,0 +1,21 @@
+- name: create gwasMP directory structure
+  file:
+    path: "/srv/shiny-server/gwasMP"
+    state: directory
+    mode: 0755
+    owner: shiny
+    group: shiny
+
+- name: install gwasMP files
+  copy:
+    src: "{{ role_path }}/files/{{ item }}"
+    dest: "/srv/shiny-server/gwasMP/{{ item }}"
+    owner: shiny
+    group: shiny
+    mode: 0644
+  with_items:
+    - "data.rdata"
+    - "ga.js"
+    - "helpers.R"
+    - "server.R"
+    - "UI.R"
