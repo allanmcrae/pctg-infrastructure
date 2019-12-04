@@ -1,0 +1,22 @@
+- name: install needed R libraries
+  cran: name=knitr state=present
+
+- name: create gctaPower directory structure
+  file:
+    path: "/srv/shiny-server/gctaPower"
+    state: directory
+    mode: 0755
+    owner: shiny
+    group: shiny
+
+- name: install gctaPower files
+  copy:
+    src: "{{ role_path }}/files/{{ item }}"
+    dest: "/srv/shiny-server/gctaPower/{{ item }}"
+    owner: shiny
+    group: shiny
+    mode: 0644
+  with_items:
+    - "functions.R"
+    - "server.R"
+    - "ui.R"

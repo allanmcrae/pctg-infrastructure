@@ -7,3 +7,6 @@
 [submodule "roles/shiny-abc/files"]
 	path = roles/shiny-abc/files
 	url = https://github.com/CNSGenomics/ABC.git
+[submodule "roles/shiny-gctaPower/files"]
+	path = roles/shiny-gctaPower/files
+	url = https://github.com/jianyangqt/gctaPower.git
