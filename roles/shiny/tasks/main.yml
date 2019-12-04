@@ -1,0 +1,4 @@
+- name: install the latest version of R
+  dnf:
+    name: R
+    state: latest

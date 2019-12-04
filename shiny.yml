@@ -5,4 +5,5 @@
   
   roles:
     - fail2ban
+    - shiny
 
