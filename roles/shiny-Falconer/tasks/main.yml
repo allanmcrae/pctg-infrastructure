@@ -1,0 +1,23 @@
+- name: create Falconer directory structure
+  file:
+    path: "/srv/shiny-server/{{ item }}"
+    state: directory
+    mode: 0755
+    owner: shiny
+    group: shiny
+  with_items:
+    - "Falconer"
+    - "Falconer/www"
+
+- name: install Falconer files
+  copy:
+    src: "{{ role_path }}/files/{{ item }}"
+    dest: "/srv/shiny-server/Falconer/{{ item }}"
+    owner: shiny
+    group: shiny
+    mode: 0644
+  with_items:
+    - "falconer_a_d_min.r"
+    - "server.R"
+    - "ui.R"
+    - "www/model.jpg"
