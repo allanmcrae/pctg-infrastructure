@@ -22,3 +22,6 @@
 [submodule "roles/shiny-TwinPower/files"]
 	path = roles/shiny-TwinPower/files
 	url = https://github.com/CNSGenomics/TwinPower.git
+[submodule "roles/shiny-LMOR/files"]
+	path = roles/shiny-LMOR/files
+	url = https://github.com/CNSGenomics/ORShiny.git

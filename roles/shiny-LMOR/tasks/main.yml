@@ -1,0 +1,31 @@
+- name: install needed R libraries
+  cran: name=readr state=present
+
+- name: create LMOR directory structure
+  file:
+    path: "/srv/shiny-server/{{ item }}"
+    state: directory
+    mode: 0755
+    owner: shiny
+    group: shiny
+  with_items:
+    - "LMOR"
+    - "LMOR/www"
+    - "LMOR/www/data"
+
+- name: install LMOR files
+  copy:
+    src: "{{ role_path }}/files/{{ item }}"
+    dest: "/srv/shiny-server/LMOR/{{ item }}"
+    owner: shiny
+    group: shiny
+    mode: 0644
+  with_items:
+    - "google-analytics.js"
+    - "server.R"
+    - "shiny_lmor_func.R"
+    - "ui.R"
+    - "www/data_example.png"
+    - "www/test_2.png"
+    - "www/data/shiny_lmor_func.R"
+    - "www/data/test2_mlma.txt"

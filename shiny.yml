@@ -11,6 +11,7 @@
     - shiny-gctaPower
     - shiny-genRoc
     - shiny-gwasMP
+    - shiny-LMOR
     - shiny-M2Tdb
     - shiny-mRnd
     - shiny-TwinPower
