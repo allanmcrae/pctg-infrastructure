@@ -2,3 +2,18 @@
   dnf:
     name: R
     state: latest
+
+- name: install shiny package
+  cran: name=shiny state=present
+
+- name: install shiny server
+  dnf:
+    name: 'https://download3.rstudio.org/centos6.3/x86_64/shiny-server-1.5.12.933-x86_64.rpm'
+    state: present
+
+- name: start and enable service
+  systemd:
+    name: "shiny-server.service"
+    enabled: yes
+    state: started
+    daemon-reload: yes
