@@ -25,3 +25,6 @@
 [submodule "roles/shiny-LMOR/files"]
 	path = roles/shiny-LMOR/files
 	url = https://github.com/CNSGenomics/ORShiny.git
+[submodule "roles/shiny-SMRdb/files"]
+	path = roles/shiny-SMRdb/files
+	url = https://github.com/CNSGenomics/SMRdb.git
