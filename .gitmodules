@@ -4,3 +4,6 @@
 [submodule "roles/shiny-Falconer/files"]
 	path = roles/shiny-Falconer/files
 	url = https://github.com/CNSGenomics/falconer-shiny
+[submodule "roles/shiny-abc/files"]
+	path = roles/shiny-abc/files
+	url = https://github.com/CNSGenomics/ABC.git
