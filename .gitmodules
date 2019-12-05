@@ -31,3 +31,6 @@
 [submodule "roles/shiny-CAGE/files"]
 	path = roles/shiny-CAGE/files
 	url = git@github.com:CNSGenomics/cage-shiny.git
+[submodule "roles/INDI-V/files"]
+	path = roles/shiny-INDI-V/files
+	url = git@github.com:CNSGenomics/INDI-V.git

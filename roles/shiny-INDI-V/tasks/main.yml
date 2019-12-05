@@ -1,0 +1,29 @@
+- name: install needed R libraries
+  cran: name={{ item }} state=present
+  with_items:
+    - knitr
+    - xtable
+
+- name: create INDI-V directory structure
+  file:
+    path: "/srv/shiny-server/INDI-V"
+    state: directory
+    mode: 0755
+    owner: shiny
+    group: shiny
+
+- name: install INDI-V files
+  copy:
+    src: "{{ role_path }}/files/{{ item }}"
+    dest: "/srv/shiny-server/INDI-V/{{ item }}"
+    owner: shiny
+    group: shiny
+    mode: 0644
+  with_items:
+    - "custom_html.R"
+    - "functions.R"
+    - "inputs.txt"
+    - "parameters.txt"
+    - "plotfunctions.R"
+    - "server.R"
+    - "ui.R"
