@@ -1,0 +1,33 @@
+- name: install needed R libraries
+  cran: name={{ item }} state=present
+  with_items:
+    - data.table
+    - shinyjs
+
+- name: create CAGE directory structure
+  file:
+    path: "/srv/shiny-server/{{ item }}"
+    state: directory
+    mode: 0755
+    owner: shiny
+    group: shiny
+  with_items:
+    - "CAGE"
+    - "CAGE/www"
+    - "CAGE/www/busyIndicator"
+
+- name: install CAGE files
+  copy:
+    src: "{{ role_path }}/files/{{ item }}"
+    dest: "/srv/shiny-server/CAGE/{{ item }}"
+    owner: shiny
+    group: shiny
+    mode: 0644
+  with_items:
+    - "google-analytics.js"
+    - "server.R"
+    - "setup.rda"
+    - "ui.R"
+    - "www/bootstrap.css"
+    - "www/busyIndicator/ajaxloaderq.gif"
+    - "www/busyIndicator/busyIndicator.css"

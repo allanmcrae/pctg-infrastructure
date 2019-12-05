@@ -28,3 +28,6 @@
 [submodule "roles/shiny-SMRdb/files"]
 	path = roles/shiny-SMRdb/files
 	url = https://github.com/CNSGenomics/SMRdb.git
+[submodule "roles/shiny-CAGE/files"]
+	path = roles/shiny-CAGE/files
+	url = git@github.com:CNSGenomics/cage-shiny.git

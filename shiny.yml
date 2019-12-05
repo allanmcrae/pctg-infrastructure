@@ -7,6 +7,7 @@
     - fail2ban
     - shiny
     - shiny-abc
+    - shiny-CAGE
     - shiny-Falconer
     - shiny-gctaPower
     - shiny-genRoc
