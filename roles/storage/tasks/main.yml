@@ -1,0 +1,6 @@
+- name: Create a ext4 filesystem on /dev/vdb
+  filesystem:
+    fstype: ext4
+    dev: /dev/vdb
+
+# TODO: mount storage somewhere useful
