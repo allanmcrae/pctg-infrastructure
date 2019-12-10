@@ -1,0 +1,9 @@
+---
+
+- name: shiny server provisioning
+  hosts: pctg_shiny
+  
+  roles:
+    - update
+    - fail2ban
+
