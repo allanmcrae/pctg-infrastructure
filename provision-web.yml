@@ -1,0 +1,9 @@
+---
+
+- name: web server provisioning
+  hosts: pctg_web
+  
+  roles:
+    - update
+    - fail2ban
+
