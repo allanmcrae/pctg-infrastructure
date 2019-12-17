@@ -1,0 +1,16 @@
+- name: install php and extensions
+  dnf:
+    name:
+      - php 
+      - php-cli
+      - php-mysqlnd
+      - php-json
+      - php-opcache
+      - php-xml
+      - php-mbstring
+      - php-gd
+      - php-curl
+    state: latest
+
+- name: start and enable php-fpm service
+  service: name=php-fpm state=started enabled=yes

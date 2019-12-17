@@ -8,4 +8,5 @@
     - fail2ban
     - storage
     - mariadb
+    - php
 
