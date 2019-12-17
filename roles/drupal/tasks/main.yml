@@ -1,0 +1,14 @@
+- name: create a new database for Drupal
+  mysql_db:
+    name=drupal
+    login_password={{ mariadb_root_pass }}
+    state=present
+
+- name: create a new database user for Drupal
+  mysql_user: >
+    name=drupal
+    password={{ mariadb_drupal_pass }}
+    priv=drupal.*:ALL
+    login_password={{ mariadb_root_pass }}
+    state=present
+    host=localhost

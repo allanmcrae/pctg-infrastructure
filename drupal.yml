@@ -1,0 +1,7 @@
+---
+
+- name: drupal site setup
+  hosts: pctg_web
+  
+  roles:
+    - drupal
