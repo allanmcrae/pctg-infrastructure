@@ -1,10 +1,9 @@
 ---
 
-- name: shiny server setup
+- name: shiny server apps
   hosts: pctg_shiny
   
   roles:
-    - shiny
     - shiny-abc
     - shiny-CAGE
     - shiny-Falconer

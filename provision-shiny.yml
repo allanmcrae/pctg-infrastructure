@@ -6,4 +6,4 @@
   roles:
     - update
     - fail2ban
-
+    - shiny
