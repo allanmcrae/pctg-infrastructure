@@ -9,4 +9,5 @@
     - storage
     - mariadb
     - php
+    - apache
 

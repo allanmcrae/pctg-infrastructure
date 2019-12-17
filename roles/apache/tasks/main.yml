@@ -1,0 +1,8 @@
+- name: install httpd
+  dnf:
+    name:
+      - httpd
+    state: latest
+
+- name: start and enable the service
+  service: name=httpd state=started enabled=yes
