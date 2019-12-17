@@ -7,4 +7,5 @@
     - update
     - fail2ban
     - storage
+    - mariadb
 
