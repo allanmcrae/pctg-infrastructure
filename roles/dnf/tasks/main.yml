@@ -3,6 +3,7 @@
   args:
     warn: no
   register: powertools
+  changed_when: false
 
 - name: enable powertools repo for epel 8
   command: dnf config-manager --set-enabled PowerTools
