@@ -12,3 +12,17 @@
     login_password={{ mariadb_root_pass }}
     state=present
     host=localhost
+    
+# The repo is manually cloned.
+# Ownership of at least site/default/files needs to be apache:apache
+# HSU drupal team manages this
+
+- name: install apache configuration
+  template:
+    src: cnsgenomics.com.conf.j2
+    dest: /etc/httpd/conf.d/cnsgenomics.com.conf
+    owner: "root"
+    group: "root"
+    mode: 0644
+  notify:
+    - restart httpd

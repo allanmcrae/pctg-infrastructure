@@ -1,0 +1,12 @@
+<VirtualHost *:80>
+    ServerAdmin a.mcrae@uq.edu.au
+    ServerName cnsgenomics.com
+    DocumentRoot /var/www/html/cnsgenomics.com
+    <Directory /var/www/html/cnsgenomics.com/>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+    ErrorLog /var/log/httpd/cnsgenomics.com_error.log
+    CustomLog /var/log/httpd/cnsgenomics.com_access.log combined
+</VirtualHost>
