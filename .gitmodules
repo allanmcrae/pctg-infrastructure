@@ -37,3 +37,6 @@
 [submodule "roles/gcta/files"]
 	path = roles/gcta/files
 	url = git@github.com:jianyangqt/gcta2_doc.git
+[submodule "roles/smr/files"]
+	path = roles/smr/files
+	url = git@github.com:jianyangqt/smr_doc.git
