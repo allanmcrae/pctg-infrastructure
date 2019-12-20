@@ -40,3 +40,6 @@
 [submodule "roles/smr/files"]
 	path = roles/smr/files
 	url = git@github.com:jianyangqt/smr_doc.git
+[submodule "roles/osca/files"]
+	path = roles/osca/files
+	url = git@github.com:jianyangqt/osca_doc.git
