@@ -46,3 +46,6 @@
 [submodule "roles/gsmr/files"]
 	path = roles/gsmr/files
 	url = git@github.com:jianyangqt/gsmr_doc.git
+[submodule "roles/gctb/files"]
+	path = roles/gctb/files
+	url = git@github.com:jianyangqt/gctb_doc.git
