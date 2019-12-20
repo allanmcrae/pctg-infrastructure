@@ -34,3 +34,6 @@
 [submodule "roles/INDI-V/files"]
 	path = roles/shiny-INDI-V/files
 	url = git@github.com:CNSGenomics/INDI-V.git
+[submodule "roles/gcta/files"]
+	path = roles/gcta/files
+	url = git@github.com:jianyangqt/gcta2_doc.git

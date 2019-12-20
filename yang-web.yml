@@ -1,0 +1,7 @@
+---
+
+- name: yang group software pages
+  hosts: pctg_web
+  
+  roles:
+    - gcta
