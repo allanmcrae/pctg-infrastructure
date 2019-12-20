@@ -43,3 +43,6 @@
 [submodule "roles/osca/files"]
 	path = roles/osca/files
 	url = git@github.com:jianyangqt/osca_doc.git
+[submodule "roles/gsmr/files"]
+	path = roles/gsmr/files
+	url = git@github.com:jianyangqt/gsmr_doc.git

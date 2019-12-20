@@ -1,0 +1,12 @@
+- name: extract the latest archive
+  unarchive:
+    src: "{{ role_path }}/files/previous/web/GSMR_web_{{ gsmr_version }}.zip"
+    dest: "/var/www/html/cnsgenomics.com/software/"
+
+- name: delete previous version
+  file:
+    path: /var/www/html/cnsgenomics.com/software/gsmr
+    state: absent
+
+- name: mv current version
+  command: mv /var/www/html/cnsgenomics.com/software/GSMR_web /var/www/html/cnsgenomics.com/software/gsmr
