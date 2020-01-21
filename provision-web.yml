@@ -6,9 +6,9 @@
   roles:
     - update
     - fail2ban
-    - storage
     - mariadb
     - php
     - apache
     - software
     - drupal
+    - storage
