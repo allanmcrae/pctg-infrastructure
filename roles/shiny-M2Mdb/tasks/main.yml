@@ -1,0 +1,28 @@
+- name: install needed R libraries
+  cran: name={{ item }} state=present
+  with_items:
+    - ggplot2
+
+- name: create M2Mdb directory structure
+  file:
+    path: "/srv/shiny-server/{{ item }}"
+    state: directory
+    mode: 0755
+    owner: shiny
+    group: shiny
+  with_items:
+    - "M2Mdb"
+
+- name: install M2Mdb files
+  copy:
+    src: "{{ role_path }}/files/M2Mdb/{{ item }}"
+    dest: "/srv/shiny-server/M2Mdb/{{ item }}"
+    owner: shiny
+    group: shiny
+    mode: 0644
+  with_items:
+    - "google-analytics.js"
+    - "m2m.rds"
+    - "metro.rds"
+    - "server.R"
+    - "ui.R"

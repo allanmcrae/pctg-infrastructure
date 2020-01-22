@@ -12,6 +12,7 @@
     - shiny-gwasMP
     - shiny-INDI-V
     - shiny-LMOR
+    - shiny-M2Mdb
     - shiny-M2Tdb
     - shiny-mRnd
     - shiny-SMRdb
