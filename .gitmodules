@@ -49,3 +49,6 @@
 [submodule "roles/gctb/files"]
 	path = roles/gctb/files
 	url = git@github.com:jianyangqt/gctb_doc.git
+[submodule "roles/M2Mdb/files"]
+	path = roles/M2Mdb/files
+	url = git@github.com:wuyangf7/PAI.git
