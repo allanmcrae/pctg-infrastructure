@@ -52,3 +52,6 @@
 [submodule "roles/shiny-M2Mdb/files"]
 	path = roles/shiny-M2Mdb/files
 	url = git@github.com:wuyangf7/PAI.git
+[submodule "roles/shiny-heritability/files"]
+	path = roles/shiny-heritability/files
+	url = git@github.com:BartBaselmans/Understanding_heritability.git
