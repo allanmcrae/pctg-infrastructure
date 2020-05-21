@@ -1,0 +1,35 @@
+- name: install needed R libraries
+  cran: name={{ item }} state=present
+  with_items:
+    - dplyr
+    - ggplot2
+    - grid
+
+- name: create CHARRGe directory structure
+  file:
+    path: "/srv/shiny-server/CHARRGe"
+    state: directory
+    mode: 0755
+    owner: shiny
+    group: shiny
+
+- name: install CHARRGe files
+  copy:
+    src: "{{ role_path }}/files/Shiny/Rshiny_understanding_heritability_0.9.5.R"
+    dest: "/srv/shiny-server/CHARRGe/app.R"
+    owner: shiny
+    group: shiny
+    mode: 0644
+
+- name: install CHARRGe files
+  copy:
+    src: "{{ role_path }}/files/Shiny/{{ item }}"
+    dest: "/srv/shiny-server/CHARRGe/{{ item }}"
+    owner: shiny
+    group: shiny
+    mode: 0644
+  with_items:
+    - "female.dark.grey.png"
+    - "female_dark.blue.png"
+    - "female.dark.blue.png"
+    - "male.dark.grey.png"
