@@ -6,11 +6,11 @@
   roles:
     - shiny-abc
     - shiny-CAGE
+    - shiny-CHARRGe
     - shiny-Falconer
     - shiny-gctaPower
     - shiny-genRoc
     - shiny-gwasMP
-    - shiny-heritability
     - shiny-INDI-V
     - shiny-LMOR
     - shiny-M2Mdb
