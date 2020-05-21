@@ -4,6 +4,8 @@
     - dplyr
     - ggplot2
     - grid
+    - png
+    - viridis
 
 - name: create CHARRGe directory structure
   file:
@@ -31,5 +33,5 @@
   with_items:
     - "female.dark.grey.png"
     - "female_dark.blue.png"
-    - "female.dark.blue.png"
+    - "male.dark.blue.png"
     - "male.dark.grey.png"
