@@ -8,6 +8,7 @@
   with_items:
     - "gctb"
     - "gctb/download"
+    - "gctb/fig"
     - "gctb/static"
     - "gctb/static/css"
     - "gctb/static/js"
@@ -37,6 +38,14 @@
   copy:
     src: "{{ role_path }}/files/build/download/"
     dest: "/var/www/html/cnsgenomics.com/software/gctb/download/"
+    owner: apache
+    group: apache
+    mode: 0644
+
+- name: install GCTB figures
+  copy:
+    src: "{{ role_path }}/files/build/fig/"
+    dest: "/var/www/html/cnsgenomics.com/software/gctb/fig/"
     owner: apache
     group: apache
     mode: 0644
