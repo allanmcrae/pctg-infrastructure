@@ -4,8 +4,11 @@
     - dplyr
     - ggplot2
     - grid
+    - htmlTable
     - png
+    - shinyhelper
     - viridis
+    
 
 - name: create CHARRGe directory structure
   file:
@@ -17,7 +20,7 @@
 
 - name: install CHARRGe files
   copy:
-    src: "{{ role_path }}/files/Shiny/Rshiny_understanding_heritability_0.9.5.R"
+    src: "{{ role_path }}/files/Shiny/Rshiny_understanding_heritability_1.0.6.R"
     dest: "/srv/shiny-server/CHARRGe/app.R"
     owner: shiny
     group: shiny
@@ -35,3 +38,9 @@
     - "female_dark.blue.png"
     - "male.dark.blue.png"
     - "male.dark.grey.png"
+    - "female.orange.png"
+    - "male.orange.png"
+    - "CDRR.md"
+    - "Function_shiny1.R"
+    - "Heritability.md"
+    - "RiskinRelatives.md"
