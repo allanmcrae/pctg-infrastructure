@@ -20,7 +20,7 @@
 
 - name: install CHARRGe files
   copy:
-    src: "{{ role_path }}/files/Shiny/Rshiny_understanding_heritability_1.0.6.R"
+    src: "{{ role_path }}/files/Shiny/Rshiny_understanding_heritability_1.0.8.R"
     dest: "/srv/shiny-server/CHARRGe/app.R"
     owner: shiny
     group: shiny
