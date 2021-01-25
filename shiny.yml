@@ -4,17 +4,7 @@
   hosts: pctg_shiny
   
   roles:
-    - shiny-abc
-    - shiny-CAGE
+   # - shiny-abc
+   # - shiny-CAGE
     - shiny-CHARRGe
-    - shiny-Falconer
-    - shiny-gctaPower
-    - shiny-genRoc
-    - shiny-gwasMP
-    - shiny-INDI-V
-    - shiny-LMOR
-    - shiny-M2Mdb
-    - shiny-M2Tdb
-    - shiny-mRnd
-    - shiny-SMRdb
-    - shiny-TwinPower
+   
