@@ -1,0 +1,33 @@
+- name: install needed R libraries
+  cran: name={{ item }} state=present
+  with_items:
+    - plot3D
+    - htmlTable
+    - pBrackets
+    - shinyalert
+    - rhandsontable
+    - htmltools
+
+- name: create Falconer2 directory structure
+  file:
+    path: "/srv/shiny-server/{{ item }}"
+    state: directory
+    mode: 0755
+    owner: shiny
+    group: shiny
+  with_items:
+    - "Falconer2"
+    - "Falconer2/www"
+
+- name: install Falconer2 files
+  copy:
+    src: "{{ role_path }}/files/{{ item }}"
+    dest: "/srv/shiny-server/Falconer2/{{ item }}"
+    owner: shiny
+    group: shiny
+    mode: 0644
+  with_items:
+    - "App.R"
+    - "README.md"
+    - "www/AAA_model.png"
+    - "www/AD_model.png"

@@ -55,3 +55,6 @@
 [submodule "roles/shiny-heritability/files"]
 	path = roles/shiny-CHARRGe/files
 	url = git@github.com:BartBaselmans/Understanding_heritability.git
+[submodule "roles/shiny-Falconer2/files"]
+	path = roles/shiny-Falconer2/files
+	url = git@github.com:vhivert/Falconer-Shiny-App.git

@@ -4,10 +4,11 @@
   hosts: pctg_shiny
   
   roles:
-    - shiny-
+    - shiny-abc
     - shiny-CAGE
     - shiny-CHARRGe
     - shiny-Falconer
+    - shiny-Falconer2
     - shiny-gctaPower
     - shiny-genRoc
     - shiny-gwasMP
