@@ -1,0 +1,12 @@
+<VirtualHost *:80>
+    ServerAdmin a.mcrae@uq.edu.au
+    ServerName cnsgenomics.com
+    DocumentRoot /var/www/html/saghaus.org
+    <Directory /var/www/html/saghaus.org/>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+    ErrorLog /var/log/httpd/saghaus.org_error.log
+    CustomLog /var/log/httpd/saghaus.org_access.log combined
+</VirtualHost>

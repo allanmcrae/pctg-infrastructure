@@ -1,0 +1,24 @@
+- name: create a new database
+  mysql_db:
+    name=saghaus_db
+    login_password={{ mariadb_root_pass }}
+    state=present
+
+- name: create a new database user
+  mysql_user: >
+    name=saghausr
+    password={{ mariadb_saghaus_pass }}
+    priv=saghaus_db.*:ALL
+    login_password={{ mariadb_root_pass }}
+    state=present
+    host=localhost
+
+- name: install apache configuration
+  template:
+    src: saghaus.org.conf.j2
+    dest: /etc/httpd/conf.d/saghaus.org.conf
+    owner: "root"
+    group: "root"
+    mode: 0644
+  notify:
+    - restart httpd
