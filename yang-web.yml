@@ -4,8 +4,8 @@
   hosts: pctg_web
   
   roles:
-    - gcta
+#    - gcta
     - gctb
-    - gsmr
-    - osca
-    - smr
+#    - gsmr
+#    - osca
+#    - smr
